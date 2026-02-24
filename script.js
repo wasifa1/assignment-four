@@ -94,6 +94,7 @@ const noJobSection = document.getElementById("no-job-section")
 const cardSection = document.getElementById("card-section"); 
 
 allTab.addEventListener("click", function(){
+        availableCount.innerText = totalJobs;
 
       for(let i = 0; i<cards.length;i++){
             {
@@ -126,6 +127,7 @@ allTab.addEventListener("click", function(){
 })
 
 interviewTab.addEventListener("click", function(){
+    availableCount.innerText = interviewTotal + " of " + totalJobs;
     allTab.classList.add("bg-white","text-gray-600")
     rejectedTab.classList.add("bg-white","text-gray-600")
     allTab.classList.remove("bg-blue-600","text-white")
@@ -156,6 +158,7 @@ interviewTab.addEventListener("click", function(){
 
 
 rejectedTab.addEventListener("click", function(){
+    availableCount.innerText = rejectedTotal + " of " + totalJobs ;
     interviewTab.classList.add("bg-white","text-gray-600")
     interviewTab.classList.remove("bg-blue-600","text-white")
 

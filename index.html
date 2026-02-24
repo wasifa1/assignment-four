@@ -23,27 +23,27 @@
     </style>
 </head>
 
-<body id = "main-body" class= "max-w-[1600px]  mx-auto bg-[#f8fafc] md:px-60 md:py-15  px-10 py-5">
+<body id = "main-body" class= "max-w-[1600px]  mx-auto bg-[#f8fafc] sm:px-60 sm:py-15  px-10 py-5">
     <!-- Dashboard - visible at all times -->
     <section>
         <div class = "flex flex-col gap-5">
-            <h1 class = "  text-3xl text-[#002c5c] font-bold ">Job Application Tracker</h1>
-            <div class = " flex flex-col md:flex-row gap-4 ">
-                <div class = "flex-1 bg-white flex flex-col p-5 gap-2 rounded-sm shadow-sm ">
+            <h1 class = "text-center sm:text-start text-xl  sm:text-3xl text-[#002c5c] font-bold ">Job Application Tracker</h1>
+            <div class = " flex flex-col sm:flex-row sm:gap-4 gap-2">
+                <div class = "text-center sm:text-start flex-1 bg-white flex flex-col p-2 sm:p-5 gap-2 rounded-sm shadow-sm ">
                     <p class = "text-gray-700 text-sm">Total</p>
                     <p id = "total-count" class = "text-[#002c5c] text-2xl">8</p>
                 </div>
-                <div class = "flex-1 bg-white flex flex-col p-5 gap-2 rounded-sm shadow-sm">
+                <div class = "text-center sm:text-start flex-1 bg-white flex flex-col p-2 sm:p-5 gap-2 rounded-sm shadow-sm">
                     <p class = "text-gray-700 text-sm">Interview</p>
                     <p id= "interview-count" class = "text-green-400 text-2xl">0</p>
                 </div>
-                <div class = "flex-1 bg-white flex flex-col p-5 gap-2 rounded-sm shadow-sm">
+                <div class = "text-center sm:text-start flex-1 bg-white flex flex-col p-2 sm:p-5 gap-2 rounded-sm shadow-sm">
                     <p class = "text-gray-700 text-sm">Rejected</p>
                     <p id="rejected-count" class = "text-red-400  text-2xl">0</p>
                 </div>
             </div>
             <div class="border-t border-gray-200"></div>
-            <div class="flex flex-row gap-6 justify-between">
+            <div class="flex flex-col sm:flex-row gap-2 sm:gap-6 sm:justify-between items-center">
                 <p class = "text-[#002c5c] text-lg font-bold">Available Jobs</p>
                 <p class = "text-lg text-gray-600"><span id="available-count" >8</span>  jobs</p>
             </div>
@@ -68,7 +68,7 @@
    <!-- cards -->
     <section id = "card-section">
         <div class = "flex flex-col gap-4 my-4">
-            <div id="card1" class = "cards rounded-lg bg-white flex flex-col gap-6 p-6 shadow-gray-200 ">
+            <div id="card1" class = "cards rounded-lg bg-white flex flex-col sm:gap-6 sm:p-6 gap-2 p-2 shadow-gray-200 ">
                 <div class="flex flex-row justify-between">
                     <div class = "flex flex-col">
                         <p class="text-lg  text-[#002c5c] font-semibold">Mobile First Corp</p>
@@ -88,7 +88,7 @@
                     <button class ="rejected-btn font-semibold rounded-md px-3 py-2 border border-red-400 text-red-400">REJECTED</button>
                 </div></div>
 
-            <div id="card2" class = "cards rounded-lg bg-white flex flex-col gap-6 p-6 shadow-gray-200 ">
+            <div id="card2" class = "cards rounded-lg bg-white flex flex-col sm:gap-6 sm:p-6 gap-2 p-2 shadow-gray-200 ">
                 <div class="flex flex-row justify-between">
                     <div class = "flex flex-col">
                         <p class="text-lg  text-[#002c5c] font-semibold">WebFlow Agency</p>
@@ -108,7 +108,7 @@
                     <button class ="rejected-btn font-semibold rounded-md px-3 py-2 border border-red-400 text-red-400">REJECTED</button>
                 </div></div>
 
-            <div id="card3" class = "cards rounded-lg bg-white flex flex-col gap-6 p-6 shadow-gray-200 ">
+            <div id="card3" class = "cards rounded-lg bg-white flex flex-col sm:gap-6 sm:p-6 gap-2 p-2 shadow-gray-200 ">
                 <div class="flex flex-row justify-between">
                     <div class = "flex flex-col">
                         <p class="text-lg  text-[#002c5c] font-semibold">DataViz Solutions</p>
@@ -128,7 +128,7 @@
                     <button class ="rejected-btn font-semibold rounded-md px-3 py-2 border border-red-400 text-red-400">REJECTED</button>
                 </div></div>
 
-            <div id="card4" class = "cards rounded-lg bg-white flex flex-col gap-6 p-6 shadow-gray-200 ">
+            <div id="card4" class = "cards rounded-lg bg-white flex flex-col sm:gap-6 sm:p-6 gap-2 p-2 shadow-gray-200 ">
                 <div class="flex flex-row justify-between">
                     <div class = "flex flex-col">
                         <p class="text-lg  text-[#002c5c] font-semibold">CloudFirst Inc</p>
@@ -148,7 +148,7 @@
                     <button class ="rejected-btn font-semibold rounded-md px-3 py-2 border border-red-400 text-red-400">REJECTED</button>
                 </div></div>
 
-            <div id="card5" class = "cards rounded-lg bg-white flex flex-col gap-6 p-6 shadow-gray-200 ">
+            <div id="card5" class = "cards rounded-lg bg-white flex flex-col sm:gap-6 sm:p-6 gap-2 p-2 shadow-gray-200 ">
                 <div class="flex flex-row justify-between">
                     <div class = "flex flex-col">
                         <p class="text-lg  text-[#002c5c] font-semibold">Innovation Labs</p>
@@ -168,7 +168,7 @@
                     <button class ="rejected-btn font-semibold rounded-md px-3 py-2 border border-red-400 text-red-400">REJECTED</button>
                 </div></div>
 
-            <div id="card6" class = "cards rounded-lg bg-white flex flex-col gap-6 p-6 shadow-gray-200 ">
+            <div id="card6" class = "cards rounded-lg bg-white flex flex-col sm:gap-6 sm:p-6 gap-2 p-2 shadow-gray-200 ">
                 <div class="flex flex-row justify-between">
                     <div class = "flex flex-col">
                         <p class="text-lg  text-[#002c5c] font-semibold">MegaCorp Solutions</p>
@@ -188,7 +188,7 @@
                     <button class ="rejected-btn font-semibold rounded-md px-3 py-2 border border-red-400 text-red-400">REJECTED</button>
                 </div></div>
                 
-            <div id="card7" class = "cards rounded-lg bg-white flex flex-col gap-6 p-6 shadow-gray-200 ">
+            <div id="card7" class = "cards rounded-lg bg-white flex flex-col sm:gap-6 sm:p-6 gap-2 p-2 shadow-gray-200 ">
                 <div class="flex flex-row justify-between">
                     <div class = "flex flex-col">
                         <p class="text-lg  text-[#002c5c] font-semibold">StartupXYZ</p>
@@ -208,7 +208,7 @@
                     <button class ="rejected-btn font-semibold rounded-md px-3 py-2 border border-red-400 text-red-400">REJECTED</button>
                 </div></div>
 
-            <div id="card8" class = "cards rounded-lg bg-white flex flex-col gap-6 p-6 shadow-gray-200 ">
+            <div id="card8" class = "cards rounded-lg bg-white flex flex-col sm:gap-6 sm:p-6 gap-2 p-2 shadow-gray-200 ">
                 <div class="flex flex-row justify-between">
                     <div class = "flex flex-col">
                         <p class="text-lg  text-[#002c5c] font-semibold">TechCorp Industries</p>
