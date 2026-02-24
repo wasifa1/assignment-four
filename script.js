@@ -49,9 +49,7 @@ interviewBtns[i].addEventListener("click",function(){
   statusBtns[i].classList.remove("bg-blue-100","text-[#002c5c]","bg-red-400") ;
     interviewBtns[i].disabled = true;
     rejectedBtns[i].disabled=false;
-    //add new interview status hide not availabe one
-    //count +1
-    // hide unavailble section and hshow that job only
+    
 })
 }
 for(let i = 0; i<rejectedBtns.length;i++){
