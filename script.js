@@ -50,6 +50,14 @@ interviewBtns[i].addEventListener("click",function(){
     interviewBtns[i].disabled = true;
     rejectedBtns[i].disabled=false;
     
+    if (rejectedTab.classList.contains("bg-blue-600")) {
+  
+    rejectedTab.click() ;
+     
+    }
+    
+
+    
 })
 }
 for(let i = 0; i<rejectedBtns.length;i++){
@@ -70,6 +78,15 @@ statusBtns[i].classList.remove("bg-blue-100","text-[#002c5c]","bg-green-400") ;
     interviewBtns[i].disabled = false;
     rejectedBtns[i].disabled=true;
     
+    if (interviewTab.classList.contains("bg-blue-600")) {
+    
+    interviewTab.click();
+       
+    
+}
+
+    
+    
 })
 }
 
@@ -77,6 +94,17 @@ const noJobSection = document.getElementById("no-job-section")
 const cardSection = document.getElementById("card-section"); 
 
 allTab.addEventListener("click", function(){
+
+      for(let i = 0; i<cards.length;i++){
+            {
+            cards[i].classList.remove("hidden")
+        }
+         
+    }
+    
+
+    cardSection.classList.remove("hidden");
+    noJobSection.classList.add("hidden");
     interviewTab.classList.add("bg-white","text-gray-600")
     rejectedTab.classList.add("bg-white","text-gray-600")
     interviewTab.classList.remove("bg-blue-600","text-white")
@@ -85,16 +113,15 @@ allTab.addEventListener("click", function(){
     allTab.classList.remove("bg-white","text-gray-600");
     allTab.classList.add("bg-blue-600","text-white");
 
-    if(totalJobs !== 0){
-        noJobSection.classList.add("hidden")
-        cardSection.classList.remove("hidden")
-    }
-    else{
-        
+    if(totalJobs === 0){
         noJobSection.classList.remove("hidden")
-        cardSection.classList.add("hidden")
-    
+        
     }
+    
+    
+  
+
+        
 
 })
 
@@ -107,9 +134,21 @@ interviewTab.addEventListener("click", function(){
     interviewTab.classList.remove("bg-white","text-gray-600");
     interviewTab.classList.add("bg-blue-600","text-white");
 
+
+
     if(interviewTotal === 0){
-        noJobSection.classList.remove("hidden")
-        cardSection.classList.add("hidden")
+        noJobSection.classList.remove("hidden") ;
+        
+    }
+    else
+        noJobSection.classList.add("hidden")
+
+      for(let i = 0; i<cards.length;i++){
+        if (statusBtns[i].innerText==="INTERVIEW"){
+            cards[i].classList.remove("hidden")
+        }
+        else 
+       { cards[i].classList.add("hidden")};
     }
     
 
@@ -129,10 +168,17 @@ rejectedTab.addEventListener("click", function(){
 
      if(rejectedTotal === 0){
         noJobSection.classList.remove("hidden")
-        cardSection.classList.add("hidden")
+        
+    }
+    else
+        noJobSection.classList.add("hidden")
+
+      for(let i = 0; i<cards.length;i++){
+        if (statusBtns[i].innerText==="REJECTED"){
+            cards[i].classList.remove("hidden")
+        }
+        else 
+       { cards[i].classList.add("hidden")};
     }
 })
-
-
-
 
