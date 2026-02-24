@@ -13,7 +13,7 @@ let cards = document.querySelectorAll('.cards') ;
 // multiple buttons of cards and delete:
 let interviewBtns =document.querySelectorAll(".interview-btn");
  let  rejectedBtns=document.querySelectorAll(".rejected-btn");
-let  deleteBtns= document.querySelectorAll(".delete-btn");
+
 let statusBtns =document.querySelectorAll(".status-btn") ;
 // initial:
 
@@ -184,4 +184,39 @@ rejectedTab.addEventListener("click", function(){
        { cards[i].classList.add("hidden")};
     }
 })
+
+//delete btn
+
+let  deleteBtns= document.querySelectorAll(".delete-btn");
+
+for(let i= 0;i<deleteBtns.length;i++){
+
+    deleteBtns[i].addEventListener("click",function(){
+        let status = statusBtns[i].innerText ;
+        if(status ==="INTERVIEW"){
+
+            interviewTotal-=1;
+            interviewCount.innerText = interviewTotal;}
+        if(status ==="REJECTED"){
+
+            rejectedTotal-=1;
+            rejectedCount.innerText = rejectedTotal;}
+        totalJobs-=1;
+        totalCount.innerText=totalJobs;
+        availableCount.innerText=totalJobs;
+        cards[i].remove() 
+        if((totalJobs === 0)){
+            noJobSection.classList.remove("hidden");
+            cardSection.classList.add("hidden");
+        } 
+        
+     if(allTab.classList.contains("bg-blue-600")) {allTab.click()}
+     if (interviewTab.classList.contains("bg-blue-600")) {interviewTab.click()
+
+     }
+     if (rejectedTab.classList.contains("bg-blue-600")) 
+        {rejectedTab.click()} ;
+        
+    })
+}
 
