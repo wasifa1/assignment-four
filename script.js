@@ -73,6 +73,66 @@ statusBtns[i].classList.remove("bg-blue-100","text-[#002c5c]","bg-green-400") ;
 })
 }
 
+const noJobSection = document.getElementById("no-job-section")
+const cardSection = document.getElementById("card-section"); 
+
+allTab.addEventListener("click", function(){
+    interviewTab.classList.add("bg-white","text-gray-600")
+    rejectedTab.classList.add("bg-white","text-gray-600")
+    interviewTab.classList.remove("bg-blue-600","text-white")
+    rejectedTab.classList.remove("bg-blue-600","text-white");
+
+    allTab.classList.remove("bg-white","text-gray-600");
+    allTab.classList.add("bg-blue-600","text-white");
+
+    if(totalJobs !== 0){
+        noJobSection.classList.add("hidden")
+        cardSection.classList.remove("hidden")
+    }
+    else{
+        
+        noJobSection.classList.remove("hidden")
+        cardSection.classList.add("hidden")
+    
+    }
+
+})
+
+interviewTab.addEventListener("click", function(){
+    allTab.classList.add("bg-white","text-gray-600")
+    rejectedTab.classList.add("bg-white","text-gray-600")
+    allTab.classList.remove("bg-blue-600","text-white")
+    rejectedTab.classList.remove("bg-blue-600","text-white");
+
+    interviewTab.classList.remove("bg-white","text-gray-600");
+    interviewTab.classList.add("bg-blue-600","text-white");
+
+    if(interviewTotal === 0){
+        noJobSection.classList.remove("hidden")
+        cardSection.classList.add("hidden")
+    }
+    
+
+})
+
+
+rejectedTab.addEventListener("click", function(){
+    interviewTab.classList.add("bg-white","text-gray-600")
+    interviewTab.classList.remove("bg-blue-600","text-white")
+
+    allTab.classList.add("bg-white","text-gray-600")
+    allTab.classList.remove("bg-blue-600","text-white")
+
+    rejectedTab.classList.add("bg-blue-600","text-white");
+    rejectedTab.classList.remove("bg-white","text-gray-600")
+
+
+     if(rejectedTotal === 0){
+        noJobSection.classList.remove("hidden")
+        cardSection.classList.add("hidden")
+    }
+})
+
 
 
 
